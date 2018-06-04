@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace C_ {
+namespace CSharp {
   class Program {
 
     static void Main(string[] args) {
-      string myName = "Brian";
+      const string myName = "Brian";
       Console.WriteLine($"Hello {myName}!");
       Console.WriteLine("Loading exercises...");
       Basics.LoadExercises();
