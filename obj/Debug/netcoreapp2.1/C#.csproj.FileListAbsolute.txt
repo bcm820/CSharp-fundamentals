@@ -1,0 +1,11 @@
+/Users/bcm/Dojo/C#/01-intro/bin/Debug/netcoreapp2.1/C#.deps.json
+/Users/bcm/Dojo/C#/01-intro/bin/Debug/netcoreapp2.1/C#.runtimeconfig.json
+/Users/bcm/Dojo/C#/01-intro/bin/Debug/netcoreapp2.1/C#.runtimeconfig.dev.json
+/Users/bcm/Dojo/C#/01-intro/bin/Debug/netcoreapp2.1/C#.dll
+/Users/bcm/Dojo/C#/01-intro/bin/Debug/netcoreapp2.1/C#.pdb
+/Users/bcm/Dojo/C#/01-intro/obj/Debug/netcoreapp2.1/C#.csprojAssemblyReference.cache
+/Users/bcm/Dojo/C#/01-intro/obj/Debug/netcoreapp2.1/C#.csproj.CoreCompileInputs.cache
+/Users/bcm/Dojo/C#/01-intro/obj/Debug/netcoreapp2.1/C#.AssemblyInfoInputs.cache
+/Users/bcm/Dojo/C#/01-intro/obj/Debug/netcoreapp2.1/C#.AssemblyInfo.cs
+/Users/bcm/Dojo/C#/01-intro/obj/Debug/netcoreapp2.1/C#.dll
+/Users/bcm/Dojo/C#/01-intro/obj/Debug/netcoreapp2.1/C#.pdb
