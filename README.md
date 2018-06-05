@@ -130,7 +130,7 @@ Console.WriteLine(rand.Next(2, 8));
 * Can also be declared with data (preferred)
 
 ```
-int numArray = new int[5];
+int[] numArray = new int[5];
 int[] numArray2 = {1,2,3,4,5};
 ```
 

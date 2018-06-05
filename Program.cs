@@ -8,6 +8,7 @@ namespace CSharp {
       Console.WriteLine($"Hello {myName}!");
       Console.WriteLine("Loading exercises...");
       Basics.LoadExercises();
+      Collections.LoadExercises();
     }
 
   }
