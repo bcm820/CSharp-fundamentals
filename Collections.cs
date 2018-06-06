@@ -24,15 +24,9 @@ namespace CSharp {
         bools[i] = flag;
         flag = !flag;
       }
-      LogArray(numbers);
-      LogArray(names);
-      LogArray(bools);
-    }
-
-    static void LogArray(object[] array) {
-      foreach (var n in array)
-        Console.Write($" {n} ");
-      Console.Write(Environment.NewLine);
+      Console.WriteLine(string.Join(", ", numbers));
+      Console.WriteLine(string.Join(", ", names));
+      Console.WriteLine(string.Join(", ", bools));
     }
 
     // Multiplication Table
@@ -60,6 +54,7 @@ namespace CSharp {
       flavors.Add("strawberry");
       flavors.Add("coffee");
       flavors.Add("rocky road");
+      Console.WriteLine(string.Join(", ", flavors.ToArray()));
       Console.WriteLine(flavors.Count);
       Console.WriteLine(flavors[2]);
       flavors.RemoveAt(2);

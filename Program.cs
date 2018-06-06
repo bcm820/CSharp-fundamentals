@@ -3,12 +3,13 @@
 namespace CSharp {
   class Program {
 
-    static void Main(string[] args) {
+    public static void Main(string[] args) {
       const string myName = "Brian";
       Console.WriteLine($"Hello {myName}!");
       Console.WriteLine("Loading exercises...");
-      Basics.LoadExercises();
-      Collections.LoadExercises();
+      // Basics.LoadExercises();
+      // Collections.LoadExercises();
+      Boxing.LoadExercises();
     }
 
   }
