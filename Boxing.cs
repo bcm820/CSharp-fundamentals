@@ -5,7 +5,7 @@ namespace CSharp {
 
   class Boxing {
 
-    public static void LoadExercises() {
+    public static void Run() {
       UnboxData();
       CastSafely();
     }

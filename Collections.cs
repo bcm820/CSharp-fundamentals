@@ -2,9 +2,10 @@ using System;
 using System.Collections.Generic;
 
 namespace CSharp {
+
   class Collections {
 
-    public static void LoadExercises() {
+    public static void Run() {
       LogThreeArrays();
       GenerateMultTable();
       ListFlavors();

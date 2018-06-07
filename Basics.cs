@@ -1,9 +1,10 @@
 using System;
 
 namespace CSharp {
+
   class Basics {
 
-    public static void LoadExercises() {
+    public static void Run() {
       BasicLoop();
       PrintDivisibles();
       PrintFizzBuzz();
