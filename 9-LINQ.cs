@@ -40,67 +40,51 @@ namespace CSharp {
       new Product("jacket", "clothing", 399.99)
     };
 
-    public static void UseQueries() {
+    public static void UseQueries(string type) {
 
-      Console.WriteLine($"*** RAW QUERIES ***");
-      ShowSorted(SortWithRawQuery(products));
-      var categories = ShowCategorized(CategorizeWithRawQuery(products));
-      var productPairs = FindEqualsWithRawQuery(
+      Console.WriteLine($"* {type.ToUpper()} QUERIES *");
+      ShowSorted(Sort(products, type));
+      var categories = ShowCategorized(Categorize(products, type));
+      var productPairs = FindEquals(
         categories["clothing"],
-        categories["vehicle"]
+        categories["vehicle"],
+        type
         );
       ShowEquallyPriced(productPairs);
-
-      Console.WriteLine($"*** METHOD QUERIES ***");
-      ShowSorted(SortWithMethodQuery(products));
-      var categories2 = ShowCategorized(CategorizeWithMethodQuery(products));
-      var productPairs2 = FindEqualsWithMethodQuery(
-        categories2["clothing"],
-        categories2["vehicle"]
-        );
-      ShowEquallyPriced(productPairs2);
     }
 
-    static IEnumerable<Product> SortWithRawQuery(Product[] products) {
-      return from product in products
-             where product.price > 10
-             orderby product.price descending
-             select new Product(product.name, product.category, product.price);
-    }
-
-    static IEnumerable<Product> SortWithMethodQuery(Product[] products) {
-      return products
-        .Where(product => product.price > 10)
-        .OrderByDescending(product => product.price);
+    static IEnumerable<Product> Sort(Product[] products, string type) {
+      if (type == "method") {
+        return products
+          .Where(product => product.price > 10)
+          .OrderByDescending(product => product.price);
+      } else return from product in products
+                    where product.price > 10
+                    orderby product.price descending
+                    select new Product(product.name, product.category, product.price);
     }
 
     static IEnumerable<IGrouping<string, Product>>
-      CategorizeWithRawQuery(Product[] products) {
-      return from product in products
-             group product by product.category into category
-             select category;
-    }
-
-    static IEnumerable<IGrouping<string, Product>>
-      CategorizeWithMethodQuery(Product[] products) {
-      return products.GroupBy(product => product.category);
+      Categorize(Product[] products, string type) {
+      if (type == "method") {
+        return products.GroupBy(product => product.category);
+      } else return from product in products
+                    group product by product.category into category
+                    select category;
     }
 
     static IEnumerable<ProductPair>
-      FindEqualsWithRawQuery(List<Product> list1, List<Product> list2) {
-      return from product1 in list1
-             join product2 in list2
-             on product1.price equals product2.price
-             select new ProductPair(product1.name, product2.name, product1.price);
-    }
-
-    static IEnumerable<ProductPair>
-      FindEqualsWithMethodQuery(List<Product> list1, List<Product> list2) {
-      return list1.Join(list2,
-        product1 => product1.price,
-        product2 => product2.price,
-        (p1, p2) => new ProductPair(p1.name, p2.name, p1.price)
-      );
+      FindEquals(List<Product> list1, List<Product> list2, string type) {
+      if (type == "method") {
+        return list1.Join(list2,
+            product1 => product1.price,
+            product2 => product2.price,
+            (p1, p2) => new ProductPair(p1.name, p2.name, p1.price)
+          );
+      } else return from product1 in list1
+                    join product2 in list2
+                    on product1.price equals product2.price
+                    select new ProductPair(product1.name, product2.name, product1.price);
     }
 
     static void ShowSorted(IEnumerable<Product> sortedProducts) {

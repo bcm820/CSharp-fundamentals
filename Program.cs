@@ -13,10 +13,10 @@ namespace CSharp {
       // Inheritance.DriveCar();
       // Abstraction.Practice();
       // CustomDelegate.Example();
-      FuncDelegate.Example();
-      ActionDelegate.Example();
-      CustomDelegate.Example();
-      // LINQPractice.UseQueries();
+      // Delegates.FuncExample();
+      // Delegates.ActionExample();
+      // Delegates.CustomDelExample();
+      LINQPractice.UseQueries("method");
     }
 
   }
