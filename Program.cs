@@ -5,14 +5,18 @@ namespace CSharp {
   class Program {
 
     public static void Main(string[] args) {
-      const string myName = "Brian";
-      Console.WriteLine($"Hello {myName}!");
-      Console.WriteLine("Loading exercises...");
       // Basics.Run();
       // Collections.Run();
       // Boxing.Run();
       // ClassPractice.RunVehicle();
-      ClassPractice.PlayCards();
+      // ClassPractice.TestDeck();
+      // Inheritance.DriveCar();
+      // Abstraction.Practice();
+      // CustomDelegate.Example();
+      FuncDelegate.Example();
+      ActionDelegate.Example();
+      CustomDelegate.Example();
+      // LINQPractice.UseQueries();
     }
 
   }
