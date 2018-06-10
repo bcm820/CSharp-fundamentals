@@ -22,9 +22,7 @@ namespace CSharp {
 
     // Action Delegate: Used when delegate won't return a value
     public static void ActionExample() {
-      Action<string> log = (string message) => {
-        Console.WriteLine(message);
-      };
+      Action<string> log = (string message) => Console.WriteLine(message);
       log("Action del output: void");
     }
 
@@ -32,9 +30,7 @@ namespace CSharp {
     // Most situations can use func/action delegates instead of this
     delegate int Custom(int i, int j);
     public static void CustomDelExample() {
-      Custom add = (int x, int y) => {
-        return x + y;
-      };
+      Custom add = (int x, int y) => x + y;
       int result = add(2, 2);
       Console.WriteLine($"Custom del output: {result}");
     }

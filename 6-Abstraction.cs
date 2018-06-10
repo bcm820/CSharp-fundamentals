@@ -6,9 +6,8 @@ namespace CSharp {
 
     public static void Practice() {
       var goat = new Goat();
-      foreach (var feat in goat.features) {
+      foreach (var feat in goat.features)
         Console.WriteLine($"Goat feature: {feat}");
-      }
       goat.Run();
     }
 

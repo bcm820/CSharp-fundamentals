@@ -68,9 +68,7 @@ namespace CSharp {
       return defaults;
     }
 
-    public Deck() {
-      cards = SetDefaultCards();
-    }
+    public Deck() => cards = SetDefaultCards();
 
     public Deck Reset() {
       cards = SetDefaultCards();
@@ -96,9 +94,7 @@ namespace CSharp {
       }
     }
 
-    public Deck ShowAt(string start) {
-      return ShowAt(start, 5);
-    }
+    public Deck ShowAt(string start) => ShowAt(start, 5);
 
     public Deck ShowCount() {
       Console.WriteLine($"Count: {cards.Count}");
@@ -148,9 +144,7 @@ namespace CSharp {
     // Constructor function
     // Implied static and returns new instance
     // methods can access private attributes
-    public Vehicle(int wheelAmt) {
-      wheels = wheelAmt;
-    }
+    public Vehicle(int wheelAmt) => wheels = wheelAmt;
 
     // Constructor method overload
     // Same method name, diff parameter amounts

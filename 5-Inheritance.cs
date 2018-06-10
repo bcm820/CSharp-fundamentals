@@ -21,14 +21,10 @@ namespace CSharp {
 
     // "base" can pass variables into parent constructor
     // parent constructor will execute, then child
-    public Car() : base(5) { // 5 wheels
-      condition = "New";
-    }
+    public Car() : base(5) => condition = "New"; // 5 wheels
 
     // variables can be passed from child into parent
-    public Car(double mileage) : base(5, mileage) {
-      condition = "Used";
-    }
+    public Car(double mileage) : base(5, mileage) => condition = "Used";
 
     // override method -- replaces parent method
     public string Drive() {
