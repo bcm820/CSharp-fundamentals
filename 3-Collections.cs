@@ -16,9 +16,9 @@ namespace CSharp {
     // Create an array of integer values 0 through 9
     // Create an array of names.
     // Create an array of length 10 that alternates bool values
-    static object[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-    static object[] names = { "Brian", "Seth", "Sam", "Ray" };
-    static object[] bools = new object[10];
+    static int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    static string[] names = { "Brian", "Seth", "Sam", "Ray" };
+    static bool[] bools = new bool[10];
     static void LogThreeArrays() {
       var flag = true;
       for (var i = 0; i <= 9; i++) {
