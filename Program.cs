@@ -1,4 +1,5 @@
 ﻿using System;
+using MusicLINQ;
 
 namespace CSharp {
 
@@ -16,7 +17,8 @@ namespace CSharp {
       // Delegates.FuncExample();
       // Delegates.ActionExample();
       // Delegates.CustomDelExample();
-      LINQPractice.UseQueries("method");
+      // LINQIntro.UseQueries("method");
+      Queries.SearchArtists();
     }
 
   }

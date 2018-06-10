@@ -26,7 +26,7 @@ namespace CSharp {
     }
   }
 
-  public class LINQPractice {
+  public class LINQIntro {
 
     static Product[] products = {
       new Product("jeans", "clothing", 24.99),
